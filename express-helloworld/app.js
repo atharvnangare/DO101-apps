@@ -1,11 +1,15 @@
-var express = require('express');
-app = express();
+// Import express
+const express = require('express');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!\n');
+// Initialize the app
+const app = express();
+
+// Define the /mars endpoint
+app.get('/mars', function(req, res) {
+  res.send('Hello Mars!\n');
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+// Make the app listen on port 3000
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
-
